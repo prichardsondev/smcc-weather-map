@@ -34,7 +34,7 @@ Create .env file
 sudo mv .env.example .env
 ```
 
-Modify .env file
+Modify .env file - googlemaps.com will tell you your lat and lon values
 ```
 sudo nano .env
 ```
@@ -63,7 +63,7 @@ Add to startup
 pm2 startup
 ```
 
-Run script in output from pm2 statup
+Run script in output from pm2 statup - copy / paste back to terminal
 
 Save
 ```
@@ -72,7 +72,7 @@ pm2 save
 
 #### Notes:
 - Data is pushed every 15 minutes  
-- Change DATA_INTERVAl_MINUTES in .env for testing  
+- Change DATA_INTERVAL_MINUTES in .env for testing  
 - Waiting .5 minutes for results is better the 15 minutes -)  
 - Change back to 15 when done testing so we don't clog up the database
 - Check for your apple at:  
