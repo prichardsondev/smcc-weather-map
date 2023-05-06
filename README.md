@@ -54,7 +54,10 @@ Attach DHT 11 or 22 Temp Sensor
 
 Start App
 ```
-pm2 app.js  &&\
+pm2 start app.js
+```
+Save
+```
 pm2 save
 ```
 
@@ -68,6 +71,11 @@ Run script in output from pm2 statup - copy / paste back to terminal
 Save
 ```
 pm2 save
+```
+
+Restart server after code changes
+```
+pm2 restart app
 ```
 
 #### Notes:
