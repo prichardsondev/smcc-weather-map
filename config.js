@@ -5,5 +5,6 @@ module.exports = {
     school: process.env.MONGO_SCHOOL,
     lat: process.env.LAT,
     lon: process.env.LON,
-    minutes: process.env.DATA_INTERVAL_MINUTES
+    minutes: process.env.DATA_INTERVAL_MINUTES,
+    db: process.env.MONGO_DB
 }
