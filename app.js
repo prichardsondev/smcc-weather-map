@@ -1,4 +1,4 @@
-const {lat,lon,minutes,school} = require('./config.js');
+const {lat,lon,minutes,school,dht} = require('./config.js');
 
 const tempSensor = require("node-dht-sensor").promises;
 tempSensor.setMaxRetries(10);
@@ -17,7 +17,7 @@ con.on('open', () => {
 
 let poll = async () => {
   try{
-    const res = await tempSensor.read(11, 4);
+    const res = await tempSensor.read(dht, 4);
     const temp = ((res.temperature * (9/5)) + 32).toFixed(2);
     const humidity = (res.humidity).toFixed(2);
     const latlon = `${lon},${lat}`;

@@ -7,7 +7,15 @@ Please email me if you need a mongodb username and password
 - Raspberry PI 3 or 4
 - DHT 11 or 22 temp sensor
 
-#### Setup
+### Setup  
+Attach DHT 11 or 22 Temp Sensor
+
+| Sensor Pin   | PI  Pin  |
+|--------------|----------|
+|      -       | Ground   |
+|      +       | 5V       |
+|     out      | GPIO 4   |
+
 Install Nodejs
 ```
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - &&\
@@ -43,14 +51,10 @@ Save and exit
 ctrl + x  
 y   
 
-Attach DHT 11 or 22 Temp Sensor
-
-| Sensor Pin   | PI  Pin  |
-|--------------|----------|
-|      -       | Ground   |
-|      +       | 5V       |
-|     out      | GPIO 4   |
-
+Install PM2
+```
+sudo npm i pm2 -g
+```
 
 Start App
 ```
@@ -66,7 +70,8 @@ Add to startup
 pm2 startup
 ```
 
-Run script in output from pm2 statup - copy / paste back to terminal
+Run script in output from pm2 statup - copy / paste back to terminal  
+Starts with "sudo env PATH=$PATH:..."  
 
 Save
 ```

@@ -6,5 +6,6 @@ module.exports = {
     lat: process.env.LAT,
     lon: process.env.LON,
     minutes: process.env.DATA_INTERVAL_MINUTES,
-    db: process.env.MONGO_DB
+    db: process.env.MONGO_DB,
+    dht: process.env.DHT_SENSOR_NUMBER
 }
